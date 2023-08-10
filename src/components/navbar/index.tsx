@@ -6,6 +6,7 @@ import { format } from "date-fns";
 import { enUS } from "date-fns/locale";
 import { Clock } from "@/components/clock";
 import { useDevice } from "@/contexts/deviceContext";
+import Dropdown from "@/components/dropdown";
 
 export const Navbar = () => {
 	const currentDateTime = new Date();
@@ -13,16 +14,23 @@ export const Navbar = () => {
 	const { deviceWidth } = useDevice();
 
 	return (
-		<div className="h-8 pr-4 flex justify-between items-center bg-slate-200 dark:bg-slate-800 dark:text-gray-200">
+		<div
+			className="h-8 pr-4 flex justify-between items-center bg-slate-200
+			dark:bg-slate-800 dark:text-gray-200 transition ease-in duration-200"
+		>
 			<div className="flex items-center justify-between gap-6 pl-4">
 				<button>
 					<Flower width={25} height={25} weight={"duotone"} />
 				</button>
-				<button>About</button>
+				<Dropdown />
 				{deviceWidth > 640 ? (
 					<>
-						<button>Files</button>
-						<button>Settings</button>
+						<button className="text-gray-700 dark:text-gray-500 text-opacity-50 cursor-not-allowed">
+							Files
+						</button>
+						<button className="text-gray-700 dark:text-gray-500 text-opacity-50 cursor-not-allowed">
+							Settings
+						</button>
 					</>
 				) : null}
 			</div>

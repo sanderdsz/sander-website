@@ -20,7 +20,7 @@ export const ThemeToggle = () => {
 	return (
 		<button
 			onClick={handleTheme}
-			className="dark:text-gray-200 transition ease-in duration-300"
+			className="dark:text-gray-200 transition ease-in duration-200"
 		>
 			{theme === "dark" ? (
 				<Sun width={25} height={25} weight={"duotone"} />
