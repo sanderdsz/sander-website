@@ -3,7 +3,6 @@ import Link from "next/link";
 
 const Dropdown = () => {
 	const [isOpen, setIsOpen] = useState(false);
-	const [showModal, setShowModal] = useState(false)
 
 	const toggleDropdown = () => {
 		setIsOpen(!isOpen);
@@ -33,8 +32,8 @@ const Dropdown = () => {
 						aria-labelledby="options-menu"
 					>
 						<Link
-							onClick={toggleDropdown}
 							href={"/about"}
+							onClick={toggleDropdown}
 							className="block mx-2 my-1 px-2 py-1 text-gray-700
 							hover:text-gray-200 hover:bg-blue-500 hover:rounded-md
               dark:text-gray-50"
@@ -46,20 +45,27 @@ const Dropdown = () => {
 							<hr className="mx-4 h-[1px] border-t-0 bg-gray-400 dark:bg-gray-800" />
 						</a>
 						<a
-							href="#"
+							href="https://github.com/sanderdsz"
+							target="_blank"
 							className="block mx-2 my-1 px-2 py-1 text-gray-700
 							hover:text-gray-200 hover:bg-blue-500 hover:rounded-md
               dark:text-gray-50"
 							role="menuitem"
+							onClick={toggleDropdown}
 						>
 							Github
 						</a>
+						<a>
+							<hr className="mx-4 h-[1px] border-t-0 bg-gray-400 dark:bg-gray-800" />
+						</a>
 						<a
-							href="#"
+							href="https://www.linkedin.com/in/sandersz/"
+							target="_blank"
 							className="block mx-2 my-1 px-2 py-1 text-gray-700
 							hover:text-gray-200 hover:bg-blue-500 hover:rounded-md
               dark:text-gray-50"
 							role="menuitem"
+							onClick={toggleDropdown}
 						>
 							Linkedin
 						</a>

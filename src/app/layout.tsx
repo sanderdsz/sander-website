@@ -21,12 +21,13 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={`${spaceGrotesk.className}`}>
+			<body className={`${spaceGrotesk.className} min-h-screen`}>
 				<DeviceProvider>
 					<Navbar />
 					<div
-						className="min-h-screen bg-[url('../../public/Taieri.svg')] bg-gray-100
-						dark:bg-gray-600"
+						className="h-[calc(100vh-2rem)] flex justify-center items-center
+						bg-center bg-cover bg-[url('../../public/Taieri.svg')] bg-gray-100
+						dark:bg-gray-900"
 					>
 						{children}
 					</div>
