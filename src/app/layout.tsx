@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import { DeviceProvider } from "@/contexts/deviceContext";
+import {Navbar} from "@/components/navbar";
 
 const spaceGrotesk = Space_Grotesk({
 	subsets: ["latin"],
@@ -21,7 +22,15 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${spaceGrotesk.className}`}>
-				<DeviceProvider>{children}</DeviceProvider>
+				<DeviceProvider>
+					<Navbar />
+					<div
+						className="min-h-screen bg-[url('../../public/Taieri.svg')] bg-gray-100
+						dark:bg-gray-600"
+					>
+						{children}
+					</div>
+				</DeviceProvider>
 			</body>
 		</html>
 	);
