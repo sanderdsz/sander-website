@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {useComponent} from "@/contexts/componentContext";
+import { useComponent } from "@/contexts/componentContext";
 
 const Dropdown = () => {
 	const component = useComponent();
@@ -12,7 +12,7 @@ const Dropdown = () => {
 	const handleOpenAbout = () => {
 		component.setAboutComponent(true);
 		toggleDropdown();
-	}
+	};
 
 	return (
 		<div className="relative inline-block text-left ">

@@ -2,8 +2,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import { DeviceProvider } from "@/contexts/deviceContext";
-import {Navbar} from "@/components/navbar";
-import {ComponentProvider} from "@/contexts/componentContext";
+import { Navbar } from "@/components/navbar";
+import { ComponentProvider } from "@/contexts/componentContext";
+import { Analytics } from "@vercel/analytics/react";
 
 const spaceGrotesk = Space_Grotesk({
 	subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
 							dark:bg-gray-900"
 						>
 							{children}
+							<Analytics />
 						</div>
 					</ComponentProvider>
 				</DeviceProvider>

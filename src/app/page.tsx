@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import {PageWrapper} from "@/components/pageWrapper";
-import {AnimatePresence, motion} from "framer-motion";
-import {useState} from "react";
-import {useComponent} from "@/contexts/componentContext";
-import {About} from "@/components/about";
+import { PageWrapper } from "@/components/pageWrapper";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+import { useComponent } from "@/contexts/componentContext";
+import { About } from "@/components/about";
 
 type PageProps = {
 	searchParams: Record<string, string> | null | undefined;
 };
 
-export default function Home({searchParams}: PageProps) {
+export default function Home({ searchParams }: PageProps) {
 	const component = useComponent();
 
 	return (
