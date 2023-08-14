@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import { DeviceProvider } from "@/contexts/deviceContext";
 import {Navbar} from "@/components/navbar";
+import {ComponentProvider} from "@/contexts/componentContext";
 
 const spaceGrotesk = Space_Grotesk({
 	subsets: ["latin"],
@@ -23,14 +24,16 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={`${spaceGrotesk.className} min-h-screen`}>
 				<DeviceProvider>
-					<Navbar />
-					<div
-						className="h-[calc(100vh-2rem)] flex justify-center items-center
-						bg-center bg-cover bg-[url('../../public/Taieri.svg')] bg-gray-100
-						dark:bg-gray-900"
-					>
-						{children}
-					</div>
+					<ComponentProvider>
+						<Navbar />
+						<div
+							className="h-[calc(100vh-2rem)] flex justify-center items-center
+							bg-center bg-cover bg-[url('../../public/Taieri.svg')] bg-gray-100
+							dark:bg-gray-900"
+						>
+							{children}
+						</div>
+					</ComponentProvider>
 				</DeviceProvider>
 			</body>
 		</html>

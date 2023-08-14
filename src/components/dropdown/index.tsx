@@ -1,12 +1,18 @@
 import { useState } from "react";
-import Link from "next/link";
+import {useComponent} from "@/contexts/componentContext";
 
 const Dropdown = () => {
+	const component = useComponent();
 	const [isOpen, setIsOpen] = useState(false);
 
 	const toggleDropdown = () => {
 		setIsOpen(!isOpen);
 	};
+
+	const handleOpenAbout = () => {
+		component.setAboutComponent(true);
+		toggleDropdown();
+	}
 
 	return (
 		<div className="relative inline-block text-left ">
@@ -31,16 +37,15 @@ const Dropdown = () => {
 						aria-orientation="vertical"
 						aria-labelledby="options-menu"
 					>
-						<Link
-							href={"/about"}
-							onClick={toggleDropdown}
+						<button
+							onClick={() => handleOpenAbout()}
 							className="block mx-2 my-1 px-2 py-1 text-gray-700
 							hover:text-gray-200 hover:bg-blue-500 hover:rounded-md
               dark:text-gray-50"
 							role="menuitem"
 						>
 							Sander Zuchinalli
-						</Link>
+						</button>
 						<a>
 							<hr className="mx-4 h-[1px] border-t-0 bg-gray-400 dark:bg-gray-800" />
 						</a>

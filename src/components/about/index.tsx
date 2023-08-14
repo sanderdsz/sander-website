@@ -4,8 +4,9 @@ import {PageWrapper} from "@/components/pageWrapper";
 import {Window} from "@/components/window";
 import {useDevice} from "@/contexts/deviceContext";
 import { Circuitry, Cpu, Disc, TerminalWindow } from "@phosphor-icons/react"
+import {useComponent} from "@/contexts/componentContext";
 
-export default function Page() {
+export const About= () => {
   const device = useDevice();
 
   return (
@@ -40,7 +41,7 @@ export default function Page() {
             <span className="text-lg">Made under NEXT.js</span>
             {
               device.deviceWidth > 640 &&
-              <span className="text-lg">Ubuntu 22.04 LTS Generic Linux</span>
+                <span className="text-lg">Ubuntu 22.04 LTS Generic Linux</span>
             }
             <span className="flex items-center text-sm md:text-lg">
               <Circuitry
