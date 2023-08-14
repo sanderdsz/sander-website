@@ -19,9 +19,6 @@ export const Navbar = () => {
 			dark:bg-slate-800 dark:text-gray-200 transition ease-in duration-200"
 		>
 			<div className="flex items-center justify-between pl-4 gap-3 md:gap-6">
-				<button>
-					<Flower width={25} height={25} weight={"duotone"} />
-				</button>
 				<Dropdown />
 				{deviceWidth > 640 ? (
 					<>
