@@ -8,7 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 const spaceGrotesk = Space_Grotesk({
 	subsets: ["latin"],
-	weight: ["400", "500", "600"],
+	weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {

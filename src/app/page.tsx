@@ -2,7 +2,6 @@
 
 import { PageWrapper } from "@/components/pageWrapper";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
 import { useComponent } from "@/contexts/componentContext";
 import { About } from "@/components/about";
 

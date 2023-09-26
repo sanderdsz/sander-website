@@ -4,7 +4,6 @@ import { PageWrapper } from "@/components/pageWrapper";
 import { Window } from "@/components/window";
 import { useDevice } from "@/contexts/deviceContext";
 import { Circuitry, Cpu, Disc, TerminalWindow } from "@phosphor-icons/react";
-import { useComponent } from "@/contexts/componentContext";
 
 export const About = () => {
 	const device = useDevice();
@@ -16,14 +15,14 @@ export const About = () => {
 				width={device.deviceWidth < 640 ? 22 : 45}
 			>
 				<div className="h-full p-6 flex flex-col gap-8 md:p-8 md:gap-10 md:flex-row md:justify-between md:items-center">
-					<div className="flex flex-col items-center md:gap-4 md:w-1/2">
+					<div className="flex flex-col items-center gap-2 md:gap-4 md:w-1/2">
 						<img
 							className="border-2 border-gray-400 rounded-full"
 							height={device.deviceWidth < 640 ? 80 : 120}
 							width={device.deviceWidth < 640 ? 80 : 120}
 							src={"https://avatars.githubusercontent.com/u/49321724?v=4"}
 						/>
-						<div className="flex flex-col gap-4">
+						<div className="flex flex-col gap-2 md:gap-4">
 							<span className="text-xl font-bold">
 								Sander dos Santos Zuchinalli
 							</span>
@@ -34,10 +33,10 @@ export const About = () => {
 							</span>
 						</div>
 					</div>
-					<div className="flex flex-col md:gap-4 md:w-1/2">
+					<div className="flex flex-col gap-2 md:gap-4 md:w-1/2">
 						<div className="text-lg md:text-2xl">
 							<span className="mr-1 font-bold">KyrieOS</span>
-							<span>Version 2</span>
+							<span className="font-thin">Version 2</span>
 						</div>
 						<span className="text-lg">Made under NEXT.js</span>
 						{device.deviceWidth > 640 && (
