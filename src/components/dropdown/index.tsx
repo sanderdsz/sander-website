@@ -62,17 +62,17 @@ const Dropdown = () => {
 						aria-orientation="vertical"
 						aria-labelledby="options-menu"
 					>
-						<button
+						<a
 							onClick={() => handleOpenAbout()}
-							className="block mx-2 my-1 px-2 py-1 text-gray-700
+							className="block mx-2 my-1 px-2 py-1 text-gray-700 cursor-pointer
 							hover:text-gray-200 hover:bg-blue-500 hover:rounded-md
-              dark:text-gray-50"
+							dark:text-gray-50"
 							role="menuitem"
 						>
 							Sander Zuchinalli
-						</button>
+						</a>
 						<a>
-							<hr className="mx-4 h-[1px] border-t-0 bg-gray-400 dark:bg-gray-800" />
+							<hr className="mx-2 h-[1px] border-t-0 bg-gray-400 dark:bg-gray-800" />
 						</a>
 						<a
 							href="https://github.com/sanderdsz"
@@ -86,7 +86,7 @@ const Dropdown = () => {
 							Github
 						</a>
 						<a>
-							<hr className="mx-4 h-[1px] border-t-0 bg-gray-400 dark:bg-gray-800" />
+							<hr className="mx-2 h-[1px] border-t-0 bg-gray-400 dark:bg-gray-800" />
 						</a>
 						<a
 							href="https://www.linkedin.com/in/sandersz/"
@@ -100,7 +100,7 @@ const Dropdown = () => {
 							Linkedin
 						</a>
 						<a>
-							<hr className="mx-4 h-[1px] border-t-0 bg-gray-400 dark:bg-gray-800" />
+							<hr className="mx-2 h-[1px] border-t-0 bg-gray-400 dark:bg-gray-800" />
 						</a>
 						<a
 							href="#"
@@ -117,7 +117,7 @@ const Dropdown = () => {
 							Hide others
 						</a>
 						<a>
-							<hr className="mx-4 h-[1px] border-t-0 bg-gray-400 dark:bg-gray-800" />
+							<hr className="mx-2 h-[1px] border-t-0 bg-gray-400 dark:bg-gray-800" />
 						</a>
 						<a
 							href="#"
